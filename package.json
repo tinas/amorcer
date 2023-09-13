@@ -1,0 +1,36 @@
+{
+  "name": "amorcer",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "author": "Ahmet Tınastepe <ahmttnstpe@gmail.com>",
+  "bin": {
+    "create-amorcer": "index.js"
+  },
+  "scripts": {
+    "lint": "eslint ./ .eslintrc.cjs"
+  },
+  "files": [
+    "index.js",
+    "template-*"
+  ],
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.49.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "prettier": "^3.0.3"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "npm run lint",
+      "git add"
+    ]
+  }
+}
