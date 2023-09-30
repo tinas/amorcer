@@ -1,11 +1,11 @@
 {
-  "name": "amorcer",
+  "name": "loom",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
   "author": "Ahmet Tınastepe <ahmttnstpe@gmail.com>",
   "bin": {
-    "create-amorcer": "index.js"
+    "create-loom": "index.js"
   },
   "scripts": {
     "lint": "eslint ./ .eslintrc.cjs"
@@ -19,10 +19,14 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "cross-spawn": "^7.0.3",
     "eslint": "^8.49.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^9.17.0",
-    "prettier": "^3.0.3"
+    "kolorist": "^1.8.0",
+    "minimist": "^1.2.8",
+    "prettier": "^3.0.3",
+    "prompts": "^2.4.2"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
